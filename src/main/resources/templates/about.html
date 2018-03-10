@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="webjars/jquery/2.2.4/jquery.min.js"></script>
+<link rel="stylesheet" href="webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
+<link rel="stylesheet" th:href="@{/css/style.css}" />
+<title>About Page Title</title><script type="text/javascript">
+	$( document ).ready(function() {
+	    console.log( "ready!" );
+	    $("#locales").change(function () {
+	        var selectedOption = $('#locales').val();
+	        if (selectedOption != ''){
+	            window.location.replace('?lang=' + selectedOption);
+	        }
+	    });
+	});
+</script>
+</head>
+<body>
+<div class="container" th:replace="fragments/header ::header">
+		HEADER
+	</div>
+	<div class="container">
+		<div class="jumbotron">
+			<div class="starter-template">
+					<h1></h1>
+					<h2>
+						<span >Nothing special!</span>
+					</h2>
+			</div>
+		</div>
+	</div>
+	<div class="container" th:replace="fragments/footer ::footer">
+		FOOTER
+	</div>
+</body>
+</html>
